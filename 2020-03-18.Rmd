@@ -4,6 +4,24 @@
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+## package
+
+```{r}
+library(googlesheets4)
+library(dplyr)
+library(lubridate)
+```
+## Create objecy
+
+```{r}
+a <- 2
+a = 2 # = 與 <-同義
+```
+```{r}
+3 -> b
+```
+
+
 
 ## R Markdown
 

@@ -61,3 +61,16 @@ tainanSportsMap[[1076]]
     
 ```
 
+```{r}
+listExample$student
+listExample$`學期` # 特殊命名依然要用反頓點呼叫
+```
+
+```{r}
+str(listExample)
+```
+
+```{r}
+str(listExample$`學期`)
+```
+

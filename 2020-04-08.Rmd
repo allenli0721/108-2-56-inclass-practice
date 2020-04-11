@@ -1,0 +1,19 @@
+---
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+vectorExample <- c("小明","小英","大雄") #1,2,3
+
+# 有多少位置可選：
+length(vectorExample)
+```
+
+```{r}
+vectorExample[[1]]
+vectorExample[[3]]
+```
+

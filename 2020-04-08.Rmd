@@ -96,3 +96,30 @@ str(newTaipeiCityVaccine[["result"]],max.level = 1)
 
 ```
 
+```{r}
+# 顯示到第一層
+str(listExample, max.level=1)
+
+listExample[c(1,2)]
+listExample[c(2,1)]
+```
+```{r}
+str(tainanSportsMap[c(1,382,1076)],max.level =1)
+```
+
+```{r}
+str(listExample, max.level = 1)
+
+listExample[c("學期")]
+listExample[c("student","學期")]
+```
+
+```{r}
+fromJSON("https://www.dropbox.com/s/qnm9bnz7vccrvcz/taipeiNightMarkets.json?dl=1", simplifyDataFrame = F) -> taipeiNightMarkets
+```
+
+```{r}
+str(listExample[c(F,T)]) # 不要，要
+str(listExample[c(T,T)]) # 要，要
+```
+

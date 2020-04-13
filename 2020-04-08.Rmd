@@ -167,3 +167,12 @@ str(get1,max.level = 1)
 ```
 
 
+```{r}
+numVector <- c(2,3,6,-1,4,2,6)
+select1 <- numVector[c(T,T,F,T,F,F,T)]; select1
+select2 <- select1[c(1,4)]; select2
+
+# 相當於
+numVector[c(T,T,F,T,F,F,T)][c(1,4)]
+```
+

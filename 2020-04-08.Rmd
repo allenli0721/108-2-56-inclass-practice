@@ -146,6 +146,10 @@ str(taipeiNightMarkets[c(T,F,
   F,T),],max.level = 1)
 ```
 
+
+```{r}
+```
+
 ```{r}
 selectedMarkets <- rep(F,14)#repeat F 14 times
 print(selectedMarkets)

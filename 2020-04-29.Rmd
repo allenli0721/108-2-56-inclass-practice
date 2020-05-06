@@ -138,6 +138,7 @@ example$allowance <-
 ```{r}
 pick_allowanceOver1000 <- example$allowance >= "1001-2000"
 example$name[pick_allowanceOver1000]
+example$allowance
 ```
 
 ```{r}
@@ -149,6 +150,29 @@ str(list_victimAges_female)
 View(list_victimAges_female$`數目`)
 sum(list_victimAges_female$`數目`)
 sum(list_victimAges_female$`數目`, na.rm=T)
+```
+
+```{r}
+levels(list_victimAges_female$`年齡層`) -> levels_ages
+print(levels_ages)
+```
+
+```{r}
+levels_new <- c(levels_ages[c(12,13,1,8,2:7,9:11)])
+levels(list_victimAges_female$`年齡層`) <- levels_new
+print(levels_new)
+```
+
+```{r}
+sum(list_victimAges_female$`數目`, na.rm=T)
+sum(list_victimAges_female$`數目`[pick_above30], na.rm = T)
+```
+```{r}
+# 先將類別資料設定成可排序類別資料
+list_victimAges_female$`年齡層` <-
+  ordered(list_victimAges_female$`年齡層`)
+pick_above30 <- 
+  list_victimAges_female$`年齡層` >= "30_39歲"
 ```
 
 ```{r}

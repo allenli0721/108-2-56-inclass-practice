@@ -171,6 +171,7 @@ sum(list_victimAges_female$`數目`[pick_above30], na.rm = T)
 # 先將類別資料設定成可排序類別資料
 list_victimAges_female$`年齡層` <-
   ordered(list_victimAges_female$`年齡層`)
+list_victimAges_female$`年齡層`
 pick_above30 <- 
   list_victimAges_female$`年齡層` >= "30_39歲"
 ```

@@ -255,6 +255,12 @@ print(twDate_reformat)
 lubridate::ymd(twDate_reformat)
 ```
 
+```{r}
+str_extract_all(
+  "我的名字8293叫17380小abce明",
+  "[\u4E00-\u9FFF]+")
+
+```
 
 
 

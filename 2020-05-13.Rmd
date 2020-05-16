@@ -245,8 +245,31 @@ levels(covid19$年齡層) <- newLevels
 covid19$年齡層
 ```
 
+```{r}
+factor2 <- 
+  factor(c("好","好","普通","普通", "好"))
+levels(factor2)
+```
 
+```{r}
+factor2[[6]] <- "差"
+factor2 # 元素6變NA
+```
 
+```{r}
+factor2 <- 
+  factor(c("好","好","普通","普通", "好"))
+levels(factor2)
+
+# 先擴大levels
+levels(factor2) <- c(levels(factor2), "差")
+levels(factor2)
+factor2[[6]] <- "差"
+factor2
+
+levels(factor2)[[4]] <- "尚可"
+levels(factor2)
+```
 
 
 

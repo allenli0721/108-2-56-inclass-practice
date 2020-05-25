@@ -61,6 +61,12 @@ map(dance,~length(.x$showInfo)) ->
 View(list_numberOfShows)
 ```
 
+```{r}
+map(dance[[4]]$showInfo, ~ .x$time) ->
+  
+list_showTimes_dance4
+View((list_showTimes_dance4))
+```
 
 
 

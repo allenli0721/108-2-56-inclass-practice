@@ -47,7 +47,19 @@ data_selected
 jsonlite::fromJSON("https://www.dropbox.com/s/6252gbdnv9owljm/dance.json?dl=1", simplifyDataFrame = F) -> dance
 ```
 
+```{r}
+map(dance, ~.x$title) ->
+  list_titles
 
+View(list_titles)
+```
+
+```{r}
+map(dance,~length(.x$showInfo)) ->
+  list_numberOfShows 
+  
+View(list_numberOfShows)
+```
 
 
 

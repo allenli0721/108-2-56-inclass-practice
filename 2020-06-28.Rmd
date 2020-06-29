@@ -40,7 +40,25 @@ map(1:5, ~{sampleData[[.]][[1]]})
 
 
 ```{r}
+eggs <- rep("雞蛋x1", 8)
 
+fryEgg <- function(egg){
+  str_replace(egg, "雞蛋", "荷包蛋")
+}
+library(stringr)
+# external dispatch
+eggs[[1]] %>% fryEgg(.)
+eggs[[2]] %>% fryEgg(.)
+eggs[[3]] %>% fryEgg(.)
+
+map(eggs, ~fryEgg(.x)) -> friedEggs1
+
+# internal dispatch
+1 %>% {fryEgg(eggs[[.]])}
+2 %>% {fryEgg(eggs[[.]])}
+3 %>% {fryEgg(eggs[[.]])}
+
+map(1:8, ~{fryEgg(eggs[[.]])}) -> friedEggs2
 ```
 
 
